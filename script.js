@@ -1,6 +1,9 @@
-//your JS code here. If required.
 function allMethods() {
-  //write your code here
+  return Object.getOwnPropertyNames(Math)
+    .filter(key => typeof Math[key] === "function") // keep only functions
+    .sort() // alphabetize
+    .join(", "); // join into a comma-separated string
 }
 
+// Example usage
 alert(allMethods());
